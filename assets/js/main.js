@@ -19,4 +19,16 @@ document.addEventListener("click", (e) => {
   }
 });
 
+function showAlert(message) {
+  const alertBox = document.getElementById("customAlert");
+  const alertMessage = document.getElementById("alertMessage");
+  alertMessage.textContent = message;
+  alertBox.style.display = "flex";
+
+  document.getElementById("alertButton").onclick = function() {
+    alertBox.style.display = "none";
+  };
+}
+
+
 loadPage("pages/home.html");
